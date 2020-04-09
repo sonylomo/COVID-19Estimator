@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID-19 Estimator</title>
+    </head>
+    <body>
+
+        <style type="text/css">
+        h1 {
+            text-align: center;
+        }
+            .form-style-2{
+                max-width: 500px;
+                padding: 20px 12px 10px 20px;
+                font: 13px Arial, Helvetica, sans-serif;
+            }
+            .form-style-2-heading{
+                font-weight: bold;
+                font-style: italic;
+                border-bottom: 2px solid #ddd;
+                margin-bottom: 20px;
+                font-size: 17px;
+                padding-bottom: 4px;
+            }
+            .form-style-2 label{
+                display: block;
+                margin: 0px 0px 15px 0px;
+            }
+            .form-style-2 label > span{
+                width: 110px;
+                font-weight: bold;
+                float: left;
+                padding-top: 8px;
+                padding-right: 5px;
+            }
+            .form-style-2 span.required{
+                color:red;
+            }
+            
+            .form-style-2 input.input-field, .form-style-2 .select-field{
+                width: 48%;	
+            }
+            .form-style-2 input.input-field,  
+                .form-style-2 .select-field{
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border: 1px solid #C2C2C2;
+                box-shadow: 1px 1px 4px #EBEBEB;
+                -moz-box-shadow: 1px 1px 4px #EBEBEB;
+                -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                padding: 7px;
+                outline: none;
+            }
+            .form-style-2 .input-field:focus,    
+            .form-style-2 .select-field:focus{
+                border: 1px solid #0C0;
+            }
+           
+            .form-style-2 input[type=submit],
+            .form-style-2 input[type=button]{
+                border: none;
+                padding: 8px 15px 8px 15px;
+                background: rgb(149, 238, 16);
+                color: black;
+                box-shadow: 1px 1px 4px black;
+                -moz-box-shadow: 1px 1px 4px black;
+                -webkit-box-shadow: 1px 1px 4px black;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+            }
+            .form-style-2 input[type=submit]:hover,
+            .form-style-2 input[type=button]:hover{
+                background: rgb(92, 151, 3);
+                color: black;
+            }
+            </style>
+
+    <h1>COVID-19 Estimator</h1>
+    
+    <div class="form-style-2">
+        <div class="form-style-2-heading">Give your information</div>
+            <form action="" method="post">
+            <label for="field1"><span>Population <span class="required">*</span></span>
+                <input data-population type="number" class="input-field" name="field1" value="" /></label>
+            <label for="field2"><span>Time to Elapse <span class="required">*</span></span>
+                <input data-time-to-elapse type="number" class="input-field" name="field2" value="" /></label>
+            <label for="field3"><span>Reported Cases <span class="required">*</span></span>
+                <input data-reported-cases type="number" class="input-field" name="field3" value="" /></label>
+            <label for="field4"><span>Total Hospital Beds <span class="required">*</span></span>
+                <input data-total-hospital-beds type="number" class="input-field" name="field4" value="" /></label>
+            <label for="field5"><span>Period Type</span>
+                <select data-period-type name="field5" class="select-field">
+                    <option value="Days">Days</option>
+                    <option value="Weeks">Weeks</option>
+                    <option value="Months">Months</option>
+            </select></label>
+           
+            <label><span> </span><input type="submit" value="Submit" /></label>
+            </form>
+    </div>
+    </body>
+</html>

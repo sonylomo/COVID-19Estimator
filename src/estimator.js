@@ -36,6 +36,14 @@ const output = {
 };
 
 const covid19ImpactEstimator = (data) => {
+  // convert period-type to days
+  if (data.periodType === 'weeks') {
+    data.timeToElapse *= 7;
+  }
+  if (data.periodType === 'months') {
+    data.timeToElapse *= 30;
+  }
+
   // (severe) impact reported cases
   const casesReported = data.reportedCases;
   output.impact.currentlyInfected = casesReported * 10;

@@ -16,7 +16,7 @@ const input = {
 
 const covid19ImpactEstimator = (data) => {
   const output = {
-    data: input, // the input data you got
+    data, // the input data you got
     impact: {
       currentlyInfected: 0,
       infectionsByRequestedTime: 0,

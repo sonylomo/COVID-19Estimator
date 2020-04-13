@@ -16,7 +16,7 @@ const input = {
 
 const covid19ImpactEstimator = (data) => {
   const output = {
-    data, // the input data you got
+    data: input, // the input data you got
     impact: {
       currentlyInfected: 0,
       infectionsByRequestedTime: 0,
@@ -82,7 +82,27 @@ const covid19ImpactEstimator = (data) => {
   output.impact.dollarsInFlight = impactInfectionsByTime * popInc * dInc * data.timeToElapse;
   output.severeImpact.dollarsInFlight = severeInfectionsByTime * popInc * dInc * data.timeToElapse;
 
-  return output;
+  return {
+    data, // the input data you got
+    impact: {
+      currentlyInfected: 0,
+      infectionsByRequestedTime: 0,
+      severeCasesByRequestedTime: 0,
+      hospitalBedsByRequestedTime: 0,
+      casesForICUByRequestedTime: 0,
+      casesForVentilatorsByRequestedTime: 0,
+      dollarsInFlight: 0
+    }, // your best case estimation
+    severeImpact: {
+      currentlyInfected: 0,
+      infectionsByRequestedTime: 0,
+      severeCasesByRequestedTime: 0,
+      hospitalBedsByRequestedTime: 0,
+      casesForICUByRequestedTime: 0,
+      casesForVentilatorsByRequestedTime: 0,
+      dollarsInFlight: 0
+    } // your severe case estimation
+  };
 };
 
 export default covid19ImpactEstimator;
